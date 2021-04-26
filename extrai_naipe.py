@@ -16,12 +16,13 @@ def extrai_naipe(carta):
         # carta do tipo 10♠, com 3 caracteres
         naipe = carta[2]
 
-        if naipe == "♠":
-            return "♠"
-        elif naipe == "♥":
-            return "♥"
-        elif naipe == "♦":
-            return "♦" 
-        elif naipe == "♣":
-            return "♣"
-    
+    if naipe == "♠":
+        return "♠"
+    elif naipe == "♥":
+        return "♥"
+    elif naipe == "♦":
+        return "♦" 
+    elif naipe == "♣":
+        return "♣"
+
+print(extrai_naipe("A♣"))
