@@ -68,11 +68,8 @@ def lista_movimentos_possiveis(baralho,indice):
 
     # se indice diferente de 0, então temos que saber
     # o nipe e o valor da carta, as linhas abaixo fazem isso
-    print(baralho[indice])
     nipe = extrai_naipe(baralho[indice])
-    print(nipe)
     valor = extrai_valor(baralho[indice])
-    print(valor)
     # preciso saber as informações da carta a ser comparada
     nipe_anterior = extrai_naipe(baralho[indice - 1])
     valor_anterior = extrai_valor(baralho[indice - 1])
