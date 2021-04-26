@@ -24,5 +24,3 @@ def extrai_naipe(carta):
         return "♦" 
     elif naipe == "♣":
         return "♣"
-
-print(extrai_naipe("A♣"))
