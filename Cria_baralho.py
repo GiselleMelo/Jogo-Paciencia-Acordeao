@@ -1,9 +1,10 @@
-import random 
-
+import random
 def cria_baralho ():
+    #define as strings que serão combinadas
     naipe = ['♠','♥','♦','♣']
     num = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']
     baralho = []
+    #constroi a string baralho 
     for n in range(0,len(num)):
         for i in range(0,len(naipe)):
             baralho.append(num[n]+naipe[i])
@@ -11,3 +12,5 @@ def cria_baralho ():
     # vamos usar ela para embaralhar o nosso deck de cartas
     random.shuffle(baralho)
     return baralho
+    
+
