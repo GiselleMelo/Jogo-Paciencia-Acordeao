@@ -1,3 +1,4 @@
+'''
 def extrai_valor (b):
     carta = b
     #casos do numero ser igual a 10
@@ -74,6 +75,12 @@ def lista_movimentos_possiveis(baralho,indice):
             movimentos.append(3)
 
     return movimentos
+
+'''
+
+import extrai_valor
+import extrai_naipe
+import lista_movimentos_possiveis
 
 def possui_movimentos_possiveis(cartas):
     estado = False
