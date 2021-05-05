@@ -24,37 +24,8 @@ anterior ('9♣') e o mesmo naipe de seu terceiro vizinho anterior ('6♥');
 vamos usar as funções já criadas para extrair o nipe e o valor da carta
 
 '''
-
-def extrai_valor (b):
-    carta = b
-    #casos do numero ser igual a 10
-    if len(carta)>2:
-        num = carta[0]+carta[1]
-    #outros casos
-    else:
-        num = carta[0]
-    return num
-
-def extrai_naipe(carta):
-# a carta pode ter 3 caracteres, isso precisa ser levado em conta 
-# só queremos o nipe, o último caractere
-# dividindo em dois casos, temos:
-
-    if (len(carta) == 2):
-        # carta do tipo 5♠, com dois caracteres
-        naipe = carta[1]
-    elif (len(carta) == 3):
-        # carta do tipo 10♠, com 3 caracteres
-        naipe = carta[2]
-
-    if naipe == "♠":
-        return "♠"
-    elif naipe == "♥":
-        return "♥"
-    elif naipe == "♦":
-        return "♦" 
-    elif naipe == "♣":
-        return "♣"
+from extrai_naipe import *
+from extrai_valor import *
 
 def lista_movimentos_possiveis(baralho,indice):
 
