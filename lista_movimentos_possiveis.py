@@ -29,6 +29,11 @@ from extrai_valor import *
 
 def lista_movimentos_possiveis(baralho,indice):
 
+    # o jogador digita um número, por explo 52, mas o código trata indice
+    # devemos decrementar 1 unidade no indice digitado
+
+    indice -= 1
+
     movimentos = []
 
     if indice == 0:

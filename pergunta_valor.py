@@ -23,4 +23,5 @@ while (desejo == "s"):
     print_baralho_ordenado(baralho)
     # após isso devemos perguntar ao jogador um número para ser jogado
     numero = int(input("Escolha uma carta (digite um numero entre 1 e {0}) ".format(contador)))
-    jogada = lista_movimentos_possiveis(baralho,numero)
+    jogada_possiveis = lista_movimentos_possiveis(baralho,numero)
+    print(jogada_possiveis)
