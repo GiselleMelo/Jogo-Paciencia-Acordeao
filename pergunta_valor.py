@@ -7,6 +7,7 @@ from extrai_naipe import *
 from lista_movimentos_possiveis import *
 from Empilha_Carta import *
 from Possui_movimentos_possiveis import *
+from print_baralho import *
 
 # temos 52 cartas, vamos criar um contador para isso, e a medida que 
 # jogamos decrementamos o contador
@@ -18,7 +19,8 @@ while (desejo == "s"):
     contador = 52
     # vamos criar o baralho a ser jogado, usando a função criar_baralho
     baralho = cria_baralho()
-    print(baralho)
+    # vamos chamar a função para printar o baralho ordenado
+    print_baralho_ordenado(baralho)
     # após isso devemos perguntar ao jogador um número para ser jogado
     numero = int(input("Escolha uma carta (digite um numero entre 1 e {0}) ".format(contador)))
     jogada = lista_movimentos_possiveis(baralho,numero)
