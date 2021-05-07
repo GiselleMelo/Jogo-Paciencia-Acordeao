@@ -15,10 +15,10 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
     # se tem 2 possições temos 2 jogadas posíveis
     # e também recebe o baralho até então
 
-    if (len(lista) == 0):
+    if (len(possiveis) == 0):
         # caso em que o usuario escolher um movimento impossível
         print("Você escolheu uma jogada impossível")
-    elif (len(possiveis == 1)):
+    elif (len(possiveis) == 1):
         # tem exatamente uma jogada possível, vamos executa-la 
         # primeiro vamos definir o indice do destino
         # se possiveis = 1, então na carta anterior
@@ -46,3 +46,4 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
         ######## depois analizar a escolha do usuario
         ######## e realizar a operação
 
+'''terminar o else''
