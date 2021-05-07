@@ -45,5 +45,6 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
         ######## resta implementar a pergunta
         ######## depois analizar a escolha do usuario
         ######## e realizar a operação
+        
 
 '''terminar o else''
