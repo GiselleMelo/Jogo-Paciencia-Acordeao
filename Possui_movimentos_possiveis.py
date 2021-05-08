@@ -1,4 +1,3 @@
-
 from lista_movimentos_possiveis import *
 
 def possui_movimentos_possiveis(cartas):

@@ -33,7 +33,7 @@ def lista_movimentos_possiveis(baralho,indice):
     # devemos decrementar 1 unidade no indice digitado
 
     indice -= 1
-
+    
     movimentos = []
 
     if indice == 0:

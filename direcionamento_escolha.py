@@ -6,6 +6,7 @@ temos 3 opções
 3 - o usuario escolher uma carta que pode ser movida de 2 maneiras
 '''
 from Empilha_Carta import *
+from print_baralho import *
 
 def direcionamento_escolha_usuario(numero,possiveis,baralho):
     # a função recebe o numero digitado pelo usuario
@@ -36,15 +37,21 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
             # o porquê do -4 segue a mesma lógica supracitada do caso anterior
         ########## saindo do condicional do destino###########
         # implementamos o empilhamento do baralho invocando a função empilha
-        empilha(baralho, numero - 1, destino) 
+        empilha(baralho, numero - 1, destino)
+        print_baralho_ordenado(baralho) 
     else:
         # se estamos nesse condicinal quer dizer que temos 2 jogadas possíveis
         # preciamos perguntar ao usuario qual jogada ele quer realizar
         # para printar a infamação das possíveis cartas vamos guardar em um vetor das cartas possíveis
         possibilidades = [baralho[numero - 1],baralho[numero - 4]]
-        ######## resta implementar a pergunta
-        ######## depois analizar a escolha do usuario
-        ######## e realizar a operação
-        
+        while True:
+                numero2 = int(input("Escolha onde empilhar (1 ou 3)"))
+                if numero2!=1 and numero2!=3:
+                    print("Jogada inválida!")
+                else:
+                    empilha(baralho, int(numero)-1, int(numero)-1-numero2)
+                    print_baralho_ordenado(baralho)
+                    break
 
-'''terminar o else''
+
+'''terminar o else'''

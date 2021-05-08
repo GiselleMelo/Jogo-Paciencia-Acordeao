@@ -8,6 +8,7 @@ from lista_movimentos_possiveis import *
 from Empilha_Carta import *
 from Possui_movimentos_possiveis import *
 from print_baralho import *
+from direcionamento_escolha import *
 #importa a biblioteca de cores
 from colorama import Fore, Back, Style
 
@@ -22,7 +23,7 @@ print('Seja bem-vindo(a) ao jogo de Paciência Acordeão! O objetivo deste jogo 
 print('Existem apenas dois movimentos possíveis:')
 
 print('1. Empilhar uma carta sobre a carta imediatamente anterior;')
-print('2. Empilhar uma carta sobre a terceira carta anterior.1) 
+print('2. Empilhar uma carta sobre a terceira carta anterior.') 
 
 print('Para que um movimento possa ser realizado basta que uma das duas condições abaixo seja atendida:')
 
@@ -31,20 +32,14 @@ print('2. As duas cartas possuem o mesmo naipe.')
 
 print('Desde que alguma das condições acima seja satisfeita, qualquer carta pode ser movimentada.')
 
-print('Aperte [Enter] para iniciar o jogo...')
-
 # vamos criar um loop para terminar o jogo ou começa-lo de novo
-baralho = cria_baralho()
-while possui_movimentos_possiveis(baralho):
+desejo = input("Aperte [Enter] para iniciar o jogo... ")
+while (desejo == ""):
     ### o jogo fica aqui dentro
     contador = 52
+    # vamos criar o baralho a ser jogado, usando a função criar_baralho
+    baralho = cria_baralho()
     # vamos chamar a função para printar o baralho ordenado
     print_baralho_ordenado(baralho)
     # após isso devemos perguntar ao jogador um número para ser jogado
-    numero = int(input("Escolha uma carta (digite um numero entre 1 e {0}) ".format(contador)))
-    jogada_possiveis = lista_movimentos_possiveis(baralho,numero)
-    print(jogada_possiveis)
-
-termina = input('Você perdeu o jogo, deseja reiniciar?')
-if termina== 'sim':
-    baralho = cria_baralho()
+    
