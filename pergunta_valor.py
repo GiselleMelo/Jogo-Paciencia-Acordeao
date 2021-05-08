@@ -42,4 +42,16 @@ while (desejo == ""):
     # vamos chamar a função para printar o baralho ordenado
     print_baralho_ordenado(baralho)
     # após isso devemos perguntar ao jogador um número para ser jogado
+    while True:
+        if len(baralho) == 1:
+            print("VOCÊ VENCEU O JOGO!")
+            break
+        if possui_movimentos_possiveis(baralho) == False:
+            print("VOCÊ PERDEU!")
+            break
+        numero = int(input("Escolha uma carta (digite um numero entre 1 e {0}) ".format(contador)))
+        jogada_possiveis = lista_movimentos_possiveis(baralho,numero)
+        direcionamento_escolha_usuario(numero, jogada_possiveis, baralho)
+    desejo = input("Aperte [Enter] para iniciar o jogo... ")
+
     

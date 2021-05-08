@@ -47,7 +47,7 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
         while True:
                 numero2 = int(input("Escolha onde empilhar (1 ou 3)"))
                 if numero2!=1 and numero2!=3:
-                    print("Jogada inválida!")
+                    print("Jogada inválida! \n Digite outro valor!")
                 else:
                     empilha(baralho, int(numero)-1, int(numero)-1-numero2)
                     print_baralho_ordenado(baralho)
