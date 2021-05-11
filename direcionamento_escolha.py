@@ -45,8 +45,8 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
         # para printar a infamação das possíveis cartas vamos guardar em um vetor das cartas possíveis
         possibilidades = [baralho[numero - 1],baralho[numero - 4]]
         while True:
-                numero2 = int(input("Escolha onde empilhar (1 ou 3)"))
-                if numero2!=1 and numero2!=3:
+                numero2 = int(input("Escolha onde empilhar (1-{0} ou 2-{1})".format(baralho[numero -1],baralho[numero-4])))
+                if numero2!=1 and numero2!=2:
                     print("Jogada inválida! \n Digite outro valor!")
                 else:
                     empilha(baralho, int(numero)-1, int(numero)-1-numero2)
