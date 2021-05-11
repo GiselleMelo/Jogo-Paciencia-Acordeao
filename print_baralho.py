@@ -2,7 +2,6 @@
 código que a variável baralho
 e devolve as cartas printadas com a respectiva ordem
 '''
-from colorama import Fore, Back, Style
 from extrai_naipe import *
 
 def print_baralho_ordenado(baralho):
