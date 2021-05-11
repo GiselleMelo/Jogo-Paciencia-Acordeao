@@ -16,6 +16,7 @@ from direcionamento_escolha import *
 # jogamos decrementamos o contador
 
 # iniciando o jogo com as perguntas
+
 print('\nPaciência Acordeão') 
 print ('================== ')
 print('Seja bem-vindo(a) ao jogo de Paciência Acordeão! O objetivo deste jogo é colocar todas as cartas em uma mesma pilha.')
