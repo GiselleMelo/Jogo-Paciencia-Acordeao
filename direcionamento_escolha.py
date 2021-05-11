@@ -7,6 +7,7 @@ temos 3 opções
 '''
 from Empilha_Carta import *
 from print_baralho import *
+from extrai_naipe import *
 
 def direcionamento_escolha_usuario(numero,possiveis,baralho):
     # a função recebe o numero digitado pelo usuario
@@ -46,9 +47,52 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
         # se estamos nesse condicinal quer dizer que temos 2 jogadas possíveis
         # preciamos perguntar ao usuario qual jogada ele quer realizar
         # para printar a infamação das possíveis cartas vamos guardar em um vetor das cartas possíveis
-        possibilidades = [baralho[numero - 1],baralho[numero - 4]]
+        possibilidades = [baralho[numero - 2],baralho[numero - 4]]
         while True:
-                numero2 = int(input("Escolha onde empilhar: \n1-{0} ou \n2-{1}\nResposta:".format(baralho[numero-2],baralho[numero-4])))
+                # vamos estrair o naipe de cada carta da possibilidade para colocar a cor correta no print
+                nipe_1 = extrai_naipe(possibilidades[0])
+                nipe_2 = extrai_naipe(possibilidades[1])
+                # de posse dos nipes podemos printar com as cores adequadas
+                # com um for alinhado vamos descobrir qual caso a ser printado
+                naipes = ['♠','♥','♦','♣']
+                c1 = ""
+                c2 = ""
+                i = 0
+                while i in range(0,len(naipes)):
+                    if naipes[i] == nipe_1:
+                        # achamos o nipe da primeira carta
+                        # de acordo com o indice temos o nipe, logo a cor
+                        if i == 0:
+                            #spada
+                            c1 = '\033[94m'
+                        elif i == 1:
+                            #copas
+                            c1 = '\033[91m'
+                        elif i == 2:
+                            #ouros
+                            c1 = '\033[93m'
+                        elif i == 3:
+                            #paus
+                            c1 = '\033[92m'
+                    if naipes[i] == nipe_2:
+                        # achamos o nipe da segunda carta
+                        # de acordo com o indice temos o nipe, logo a cor
+                        if i == 0:
+                            #spada
+                            c2 = '\033[94m'
+                        elif i == 1:
+                            #copas
+                            c2 = '\033[91m'
+                        elif i == 2:
+                            #ouros
+                            c2 = '\033[93m'
+                        elif i == 3:
+                            #paus
+                            c2 = '\033[92m'
+                    i += 1
+                # já temos todos os nipes salvos
+                # agora vamos determinar a cor, testando os nipes
+                numero2 = int(input("\033[0m" + "Escolha onde empilhar: \n1 - " + c1 + "{}".format(possibilidades[0]) + "\033[0m" + " ou\n2 - "+ c2 + "{}".format(possibilidades[1]) + "\033[0m" + "\nResposta:"))
                 if numero2!=1 and numero2!=2:
                     print("Jogada inválida! \n Digite outro valor!")
                 else:
@@ -56,5 +100,3 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
                     print_baralho_ordenado(baralho)
                     break
         return True        
-
-
