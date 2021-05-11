@@ -51,8 +51,8 @@ while (desejo == ""):
             break
         numero = int(input("Escolha uma carta (digite um numero entre 1 e {0}) ".format(contador)))
         jogada_possiveis = lista_movimentos_possiveis(baralho,numero)
-        direcionamento_escolha_usuario(numero, jogada_possiveis, baralho)
-        contador -= 1
+        if direcionamento_escolha_usuario(numero, jogada_possiveis, baralho):
+            contador -= 1
         
     desejo = input("Aperte [Enter] para iniciar o jogo... ")
 

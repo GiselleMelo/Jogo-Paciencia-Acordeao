@@ -19,6 +19,8 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
     if (len(possiveis) == 0):
         # caso em que o usuario escolher um movimento impossível
         print("Você escolheu uma jogada impossível")
+        return False
+
     elif (len(possiveis) == 1):
         # tem exatamente uma jogada possível, vamos executa-la 
         # primeiro vamos definir o indice do destino
@@ -39,6 +41,7 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
         # implementamos o empilhamento do baralho invocando a função empilha
         empilha(baralho, numero - 1, destino)
         print_baralho_ordenado(baralho) 
+        return True
     else:
         # se estamos nesse condicinal quer dizer que temos 2 jogadas possíveis
         # preciamos perguntar ao usuario qual jogada ele quer realizar
@@ -52,5 +55,6 @@ def direcionamento_escolha_usuario(numero,possiveis,baralho):
                     empilha(baralho, int(numero)-1, int(numero)-1-numero2)
                     print_baralho_ordenado(baralho)
                     break
+        return True        
 
 
