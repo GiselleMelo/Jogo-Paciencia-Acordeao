@@ -12,5 +12,3 @@ def cria_baralho ():
     # vamos usar ela para embaralhar o nosso deck de cartas
     random.shuffle(baralho)
     return baralho
-    
-

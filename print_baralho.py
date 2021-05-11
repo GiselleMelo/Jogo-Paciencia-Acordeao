@@ -25,4 +25,3 @@ def print_baralho_ordenado(baralho):
                 print('\033[0m' + str(i+1) + " - " + '\033[94m' + baralho[i] + '\033[0m')
             i += 1
         # a função não tem valores a retornar
-

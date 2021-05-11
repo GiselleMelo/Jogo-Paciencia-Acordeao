@@ -55,5 +55,3 @@ while (desejo == ""):
         direcionamento_escolha_usuario(numero, jogada_possiveis, baralho)
         contador-= 1
     desejo = input("Aperte [Enter] para iniciar o jogo... ")
-
-    

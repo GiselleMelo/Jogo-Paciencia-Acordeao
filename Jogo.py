@@ -9,8 +9,6 @@ from Empilha_Carta import *
 from Possui_movimentos_possiveis import *
 from print_baralho import *
 from direcionamento_escolha import *
-#importa a biblioteca de cores
-#from colorama import Fore, Back, Style
 
 # temos 52 cartas, vamos criar um contador para isso, e a medida que 
 # jogamos decrementamos o contador
@@ -55,5 +53,3 @@ while (desejo == ""):
             contador -= 1
         
     desejo = input("Aperte [Enter] para iniciar o jogo... ")
-
-    
