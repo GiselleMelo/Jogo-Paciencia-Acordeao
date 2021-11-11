@@ -1,4 +1,4 @@
-# Projeto-2-
+# Jogo de Cartas
 Insper
 Turma B
 Dupla do projeto:
